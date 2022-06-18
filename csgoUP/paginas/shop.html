@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon">
+    <link href="../assets/css/style.css" rel="stylesheet"/>
+    <title>Inventário - CSGO UP</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="header-container">
+            <img class="header-logo" src="../assets/img/LOGOCSGOUP.png" alt="CSGO UP">
+            <nav>
+                <ul class="header-menu">
+                    <li><a href="../paginas/index.html">HOME</a></li>
+                    <li><a href="../paginas/shop.html">LOJA</a></li>
+                    <li><a href="../paginas/inventario.html">INVENTARIO</a></li>
+                    <li class="with-submenu">
+                        <a href="#">PERFIL</a>
+                        <ul class="submenu">
+                            <li><a href="../paginas/profile-config.html">Configuracoes</a></li>
+                            <li><a href="../paginas/profile-deposito.html">Depositar</a></li>
+                            <li><a href="#">Sacar</a></li>
+                            <li><a href="#">Historico</a></li>
+                            <li><a href='#'>Estatisticas</a></li>
+                            <li><a href='#'>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-login-container">
+                <img src="../assets/img/login-icon.png">
+                <div>
+                    <a href="#">
+                        <p class="nickname">NICKNAME</p>
+                        <p class="saldo">R$9999,99</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carrossel" class="container-carrossel"></div>
+
+
+    <main>
+        <div class="page-wrapper">
+            <div class="header-shop">
+                <h1 class="loja">LOJA</h1>
+                <div class="caixaHeader">
+                    <ul class="selects">
+                        <li onclick="switchSelects('todas')" id="todas" ><a href="#">Todas</a> </li>
+                        <li onclick="switchSelects('facas')" id="facas"><a href="#">Facas</a></li>
+                        <li onclick="switchSelects('luvas')" id="luvas"><a href="#">Luvas</a></li>
+                        <li onclick="switchSelects('rifles')" id="rifles"><a href="#">Rifles</a></li>
+                        <li onclick="switchSelects('pistolas')" id="pistolas"><a href="#">Pistolas</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "headerShop">
+                
+                
+            </div>
+            <div class="container-inventario caixa">
+                <div class="header">
+                    <h3>Itens Disponiveis</h3>
+                </div>
+                    <div id="inventarioSkinLoja" class="body"></div>
+            </div>   
+        </div>
+    </main>
+</body>
+
+
+<script>
+    function switchSelects(selectEscolhido){
+        let facas = document.getElementById("facas")
+        let pistolas = document.getElementById("pistolas")
+        let luvas = document.getElementById("luvas")
+        let rifles = document.getElementById("rifles")
+        console.log(selectEscolhido)
+        console.log("=============")
+        if(selectEscolhido == "facas"){
+            let divFacas = document.getElementsByClassName("facas")
+            console.log(divFacas)
+            divFacas.style.display ="block"
+        }else{
+            let divPistolas = document.getElementsByClassName("pistolas")
+            divPistolas.style.display="none"
+            let divluvas = document.getElementsByClassName("luvas")
+            divLuvas.style.display="none"
+            let divRifles = document.getElementsByClassName("rifles")
+            divRifles.style.display="none"
+            console.log("entrou aqui 2")
+        }
+    }
+
+</script>
+<script type="module" src="../assets/js/main.js"></script>
+</html>
